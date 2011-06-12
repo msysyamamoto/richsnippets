@@ -27,6 +27,10 @@ get '/' do
   slim :index
 end
 
+get '/dummy' do
+  slim :dummy
+end
+
 post '/contents' do
   contents = params[:contents] || ''
 
