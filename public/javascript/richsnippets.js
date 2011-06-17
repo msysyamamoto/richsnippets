@@ -1,13 +1,13 @@
 $(function(){
   $(window).bind("resize", function(e) {
-    var w_width = $(window).width();
-    var h_width = $("h1").outerWidth();
+    var w_width = $("form").width();
+    var h_width = 0;//$("h1").outerWidth();
     var s_width = $('input[type="submit"]').outerWidth();
 
 
     var t_area  = $('textarea');
     var padd    = t_area.outerWidth() - t_area.width();
-    var t_width = (w_width - (h_width + s_width + padd)) * 0.75;
+    var t_width = (w_width - (h_width + s_width + padd)) - 40; // padding-left + padding-right = 40px
     $('textarea').css({
       'min-width': t_width,
       'max-width': t_width,
